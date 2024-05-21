@@ -1,0 +1,68 @@
+#savethedate, #flowers, #cloud1, 
+#cloud2, #puyisabel, #enero2025, #sabado6pm {
+  position: inherit;
+  height: 100vh;
+  width: 100vw;
+}
+
+#invitation {
+  position: absolute;
+}
+
+#cloud1 {
+  animation: cloud-moving1 infinite 8s linear;;
+}
+#cloud2 {
+  animation: cloud-moving2 infinite 10s linear;;
+}
+#savethedate, #puyisabel, #enero2025, #sabado6pm {
+  animation: float infinite 5s;
+}
+
+@keyframes cloud-moving1 {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+@keyframes cloud-moving2 {
+  0% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+@keyframes cloud-moving1 {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateX(15px);
+    transform: translateY(12px);
+  }
+  50% {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(15px);
+    transform: translateY(12px);
+  }
+}
