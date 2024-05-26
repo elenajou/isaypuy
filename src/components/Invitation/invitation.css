@@ -1,0 +1,94 @@
+.allison-regular {
+  font-family: "Allison", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8vh;
+}
+#page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#invitation, #invitation > *, #letter > * {
+  position: absolute;
+} 
+#invitation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  max-height: 900px;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+#flower1 {
+  top: -25%;
+  left: 35%;
+  transform: translate(-90px, 150px);
+}
+#flower2 {
+  top: 45%;
+  left: -35%;
+  transform: translate(90px, -150px);
+}
+#cloud1 {
+  top: -30%;
+  left: -50%;
+  transform: translate(60px, 100px);
+  animation: cloud1-moving infinite 15s linear;
+}
+#cloud2 {
+  top: 50%;
+  left: 35%;
+  transform: translate(-50px, -120px);
+  animation: cloud2-moving infinite 8s linear;
+}
+
+/* @media screen and (max-width: 400px) {
+  #page {
+    scale: 1.1;
+  }
+} */
+
+#letter {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+}
+#savethedate, #puyisabel, #enero2025, #sabado6pm {
+  top: 17%;
+  width: 100%;
+  animation: float infinite 15s;
+}
+
+@keyframes cloud1-moving {
+  0%, 100% {
+    transform: translate(70px, 105px); /* Adjust for the initial translate plus the keyframe translateY */
+  }
+  50% {
+    transform: translate(60px, 165px); /* Adjust for the initial translate plus the keyframe translateY */
+  }
+}
+@keyframes cloud2-moving {
+  0%, 100% {
+    transform: translate(-50px, -120px); /* Adjust for the initial translate plus the keyframe translateY */
+  }
+  50% {
+    transform: translate(-50px, -155px); /* Adjust for the initial translate plus the keyframe translateY */
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust this value to control the float height */
+  }
+}

@@ -1,12 +1,12 @@
-import savethedate from '../images/save-the-date/savethedate.svg';
-import flower1 from '../images/save-the-date/flower1.svg';
-import flower2 from '../images/save-the-date/flower2.svg';
-import cloud1 from '../images/save-the-date/cloud-1.svg';
-import cloud2 from '../images/save-the-date/cloud-2.svg';
-import puyisabel from '../images/save-the-date/puyisabel.svg';
-import sabado6pm from '../images/save-the-date/sabado6pm.svg';
-import enero2025 from '../images/save-the-date/enero2025.svg';
-import '../css/invitation.css';
+import savethedate from '../../images/save-the-date/savethedate.svg';
+import flower1 from '../../images/save-the-date/flower1.svg';
+import flower2 from '../../images/save-the-date/flower2.svg';
+import cloud1 from '../../images/save-the-date/cloud-1.svg';
+import cloud2 from '../../images/save-the-date/cloud-2.svg';
+import puyisabel from '../../images/save-the-date/puyisabel.svg';
+import enero2025 from '../../images/save-the-date/enero2025.svg';
+import sabado6pm from '../../images/save-the-date/sabado6pm.svg';
+import './invitation.css';
 
 function Invitation() {
   return (

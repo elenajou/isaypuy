@@ -1,4 +1,4 @@
-import Invitation from './pages/invitation';
+import Invitation from './components/Invitation/invitation.js';
 import './App.css';
 
 function App() {
