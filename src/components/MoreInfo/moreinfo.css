@@ -11,15 +11,21 @@
 }
 
 .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   max-height: 35vh;
   height: 90%;
   max-width: 70vw;
   align-self: center;
   display: flex;
+  border-radius: 5%;
   box-shadow: 8px 8px 20px 1px rgba(0, 0, 0, 0.206);
 }
 
 .card .card-title {
+  justify-self: center;
   margin-top: 40px;
   font-size: 2em;
   font-weight: bold;
@@ -36,6 +42,7 @@
 }
 
 .card .card-caption {
+  height: max-content;
   margin: 3% 4% 1% 4%;
   font-size: 1em;
 }

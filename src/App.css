@@ -11,6 +11,8 @@
 }
 
 .App {
+  background-color: white;
+  color: #465020;
   align-self: center;
   align-items: center;
   justify-items: center;
