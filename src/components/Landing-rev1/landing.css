@@ -1,0 +1,46 @@
+#landing-name > * {
+  font-family: "Allison", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+#landing-page img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: brightness(50%);
+}
+
+#landing-name {
+  color: white;
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  font-size: 100px;
+  text-align: center;
+  justify-content: center;
+}
+
+#landing-name .and {
+  height: 60px;
+  font-size: 60px;
+  line-height: 65px;
+  width: 60px;
+  justify-content: center;
+  border: 2px solid var(--highlight);
+  border-radius: 50%;
+  border-spacing: 50px;
+  margin: auto;
+  padding: 2px;
+  text-align: center;
+}

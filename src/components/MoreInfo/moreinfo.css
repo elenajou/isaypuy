@@ -1,0 +1,45 @@
+#moreinfo {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #4A5759;
+  color: #2F3E46;
+}
+
+.card {
+  max-height: 35vh;
+  height: 90%;
+  max-width: 70vw;
+  align-self: center;
+  display: flex;
+  box-shadow: 8px 8px 20px 1px rgba(0, 0, 0, 0.206);
+}
+
+.card .card-title {
+  margin-top: 40px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.card .card-icon {
+  margin-top: 0px;
+  height: 10vw;
+  max-height: 50px;
+}
+
+.card .card-icon img {
+  height: 100%;
+}
+
+.card .card-caption {
+  margin: 3% 4% 1% 4%;
+  font-size: 1em;
+}
+
+.card-button {
+  bottom: 8%;
+}

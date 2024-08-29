@@ -1,0 +1,52 @@
+:root {
+  --bkgnd-pr: #F7E1D7;
+  --bkgnd-scd: #EDAFB8;
+  --countdwn-font: 'Literata';
+}
+
+#countdown {
+  position: relative;
+  display: grid;
+  height: 30vh;
+  max-height: 250px;
+  width: 100vw;
+  align-items: center;
+  justify-items: center;
+}
+
+#clock {
+  position: absolute;
+  margin-top: 5vh;
+}
+
+/* .title {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 30px;
+} */
+
+.count > *, .caption > * {
+  display: inline-block;
+  width: 25vw;
+  max-width: 70px;
+  border-right: solid 0.5px;
+}
+
+.count {
+  font-size: 1.25em;
+  color: #465020;
+}
+.caption {
+  font-size: 14px;
+}
+#sec, #segundos {
+  border-right: unset;
+}
+
+#countdown-img {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+}

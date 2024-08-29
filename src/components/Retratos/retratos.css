@@ -1,0 +1,21 @@
+#retratos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+}
+
+#retratos-bkg {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+#retratos .button {
+  bottom: 17vh;
+}
