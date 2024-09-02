@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   background-image: url('../../images/invitation.png');
@@ -12,29 +12,32 @@
   background-size: cover;
 }
 
+#invitation h2 {
+  font-size: 1.5em;
+}
+
 .information {
-  position: absolute;
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 70vh;
 }
-
-.information > div {
+.ceremonia, .lugar {
   display: grid;
-  align-items: center;
+  align-self: center;
   justify-self: center;
-  height: 30%;
-  width: 90%;
+  height: max-content;
+  width: 70%;
 }
 
-.information .button {
+.ceremonia > *, .lugar > * {
+  margin: 10px;
+}
+
+#invitation .button {
   position: unset;
   color: white;
   justify-self: center;
-  font-size: 0.9em;
-  line-height: 2.25em;
-}
-
-.information .ceremonia {
-  margin-top: 15vh;
+  /* font-size: 0.9em; */
+  /* line-height: 2.25em; */
+  width: 100%;
 }

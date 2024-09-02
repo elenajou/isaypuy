@@ -44,12 +44,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .button {
   position: absolute;
+  display: grid;
   background-color: #AA926F;
   height: 30px;
   width: 65%;
   align-self: center;
-  line-height: 195%;
+  line-height: 100%;
   border-radius: 50px;
+  border: transparent;
   font-size: 1em;
   box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.165);
+  margin: 15px;
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
