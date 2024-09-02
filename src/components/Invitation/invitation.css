@@ -26,13 +26,7 @@
   align-self: center;
   justify-self: center;
   height: max-content;
-  width: 70%;
-}
-
-@media screen and (max-width: 375px) {
-  .ceremonia, .lugar{
-    width: 90%;
-  }
+  width: 80%;
 }
 
 .ceremonia > *, .lugar > * {
@@ -46,4 +40,6 @@
   /* font-size: 0.9em; */
   /* line-height: 2.25em; */
   width: 100%;
+  height: max-content;
+  font-size: 80%;
 }
