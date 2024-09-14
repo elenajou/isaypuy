@@ -1,0 +1,17 @@
+.customModal {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body {
+  display: grid;
+  padding: 0px;
+  height: 100%;
+}
+
+.btn-close {
+  justify-self: end;
+}
+
+
+
