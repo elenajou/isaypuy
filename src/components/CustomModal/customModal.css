@@ -1,12 +1,14 @@
 .customModal {
   display: flex;
   justify-content: center;
+  max-height: unset;
 }
 
 .modal-body {
   display: grid;
   padding: 0px;
   height: 100%;
+  max-height: unset;
 }
 
 .btn-close {
