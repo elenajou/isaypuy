@@ -3,15 +3,20 @@
   justify-content: center;
 }
 
-.modal-body {
+.ReactModal__Overlay--after-open {
+  max-height: 100vh!important;
+}
+
+.ReactModal__Content--after-open {
   display: grid;
   padding: 0px;
-  height: 100%;
+  height: max-content;
+  width: 85vw;
+  align-items: center;
 }
 
 .btn-close {
+  top: 0;
   justify-self: end;
+  z-index: 10;
 }
-
-
-

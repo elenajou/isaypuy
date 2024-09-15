@@ -1,21 +1,84 @@
 #retratos {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
+  color: white;
 }
 
-#retratos-bkg {
+.retratos-bg {
   position: absolute;
-  object-fit: cover;
+  background-image: url("https://plus.unsplash.com/premium_photo-1670430932511-ce1929259fed?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
   height: 100%;
   width: 100%;
   left: 0px;
   top: 0px;
 }
 
-#retratos .button {
-  bottom: 17vh;
+.title {
+  font-size: 40px;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+
+.body-thumbnails {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-columns: auto auto;
+
+  gap: 0.3em;
+  width: 90%;
+  height: max-content;
+}
+.thumbnail {
+  display: grid;
+  overflow: hidden
+}
+.thumbnail img{
+  align-self: center;
+  justify-self: center;
+  height: max-content;
+}
+
+.g-s-row-1 {
+  grid-row-start: 1;
+}
+.g-s-row-2 {
+  grid-row-start: 2;
+}
+.g-s-row-3 {
+  grid-row-start: 3;
+}
+.g-s-row-4 {
+  grid-row-start: 4;
+}
+
+.g-s-col-1 {
+  grid-column-start: 1;
+}
+.g-s-col-2 {
+  grid-column-start: 2;
+}
+.g-s-col-3 {
+  grid-column-start: 3;
+}
+
+.g-row-s-2 {
+  grid-row: span 2;
+}
+.g-row-s-3 {
+  grid-row: span 3;
+}
+.g-col-s-2 {
+  grid-column: span 2;
 }
