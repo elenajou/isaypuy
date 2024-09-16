@@ -26,8 +26,10 @@ function Retratos() {
   return (
     <div id="retratos" class="retratos-bg">
       {/* <img id="retratos-bkg" src={retratos} alt="IsaYPuy"/> */}
-      <div class="title">Nuestros</div>
-      <div class="title">Retratos</div>
+      <div class="title">
+        <div class="nuestros">Nuestros</div>
+        <div class="retratos-title">Retratos</div>
+      </div>
       <div class="body-thumbnails">
         {/* Column 1 */}
         <div class="g-s-row-1 g-s-col-1 g-row-s-2"><CustomModal buttonID="infoModal" content={getThumbnail(photo1)} caption={getThumbnail(photo1)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>

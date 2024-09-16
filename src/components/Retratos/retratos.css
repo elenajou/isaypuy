@@ -7,6 +7,8 @@
   height: 100vh;
   overflow: hidden;
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .retratos-bg {
@@ -21,10 +23,31 @@
   left: 0px;
   top: 0px;
 }
+.title {
+  display: grid;
+  justify-items: center;
+  height: 180px;
+}
+
+.nuestros {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-style: normal;
+  font-size: 2.2em;
+  color: var(--highlight);
+}
+.retratos-title {
+  position: relative;
+  font-size: 1em;
+  max-width: 80%;
+  top: -60%;
+  margin-bottom: 10px;
+}
 
 .title {
+  display: grid;
   font-size: 40px;
   max-width: 80%;
+  top: -10px;
   margin-bottom: 10px;
 }
 
@@ -36,7 +59,7 @@
   grid-template-rows: min-content min-content min-content min-content;
   grid-template-columns: auto auto;
 
-  gap: 0.3em;
+  gap: 0.5em;
   width: 90%;
   height: max-content;
 }
@@ -48,6 +71,7 @@
   align-self: center;
   justify-self: center;
   height: max-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .g-s-row-1 {
