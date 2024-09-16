@@ -33,13 +33,13 @@
   margin: 10px;
 }
 
-#invitation .button {
+/* #invitation .button {
   position: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   justify-self: center;
-  /* font-size: 0.9em; */
-  /* line-height: 2.25em; */
   width: 100%;
-  height: max-content;
-  font-size: 80%;
-}
+  height: 70%;
+} */

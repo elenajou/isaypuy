@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
   background-color: #4A5759;
   color: #2F3E46;
@@ -15,7 +14,7 @@
   display: grid;
   flex-direction: column;
   background-color: white;
-  max-height: 35vh;
+  max-height: 300px;
   height: 90%;
   max-width: 70vw;
   align-self: center;

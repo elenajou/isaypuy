@@ -3,17 +3,17 @@
   justify-content: center;
   max-height: unset;
 }
-
 .modal-body {
   display: grid;
-  padding: 0px;
-  height: 100%;
-  max-height: unset;
+}
+.ReactModal__Overlay--after-open {
+  max-height: 100vh!important;
 }
 
-.btn-close {
-  justify-self: end;
+.ReactModal__Content--after-open {
+  display: grid;
+  padding: 0!important;
+  height: max-content;
+  width: 85vw;
+  align-items: center;
 }
-
-
-
