@@ -38,6 +38,7 @@
 
 .card .card-icon img {
   height: 100%;
+  width: auto;
 }
 
 .card .card-caption {

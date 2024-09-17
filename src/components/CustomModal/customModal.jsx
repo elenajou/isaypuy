@@ -38,7 +38,7 @@ function CustomModal({caption, classes, buttonID, customStyle, content}) {
       >
         <div class="modal-body">
         {/* <button id="btn-close" onClick={closeModal}></button> */}
-          <div class="modal-content">{content}</div>
+          <div>{content}</div>
         </div>
       </Modal>
     </div>

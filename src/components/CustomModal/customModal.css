@@ -3,17 +3,22 @@
   justify-content: center;
   max-height: unset;
 }
-.modal-body {
-  display: grid;
-}
+
 .ReactModal__Overlay--after-open {
   max-height: 100vh!important;
+  display: grid;
+  width: 100%;
 }
 
 .ReactModal__Content--after-open {
+  position: relative!important;
   display: grid;
   padding: 0!important;
-  height: max-content;
   width: 85vw;
-  align-items: center;
+  height: max-content!important;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  align-content: center;
+  transform: translate(-13%, -20%);
 }

@@ -7,10 +7,10 @@
 #countdown {
   position: relative;
   display: grid;
-  height: 35vh;
-  max-height: 300px;
+  height: max-content;
   align-items: center;
   justify-items: center;
+  background-color: white;
 }
 
 #clock {
@@ -43,8 +43,8 @@
 }
 
 #countdown-img {
-  position: absolute;
-  height: 100%;
+  position: relative;
+  object-fit: contain;
   width: 100%;
   left: 0;
   bottom: 0;

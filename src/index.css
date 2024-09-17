@@ -19,6 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   outline: 0;
   font-size: 100%;
+  width: 100%;
   /* justify-content: center; */
   background: transparent;
 }
@@ -28,7 +29,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-weight: 200;
   font-style: normal;
   max-width: 425px;
-  max-height: 1000px;
+  max-height: 1200px;
+  background-color: white;
 }
 a {
   font-weight: 500;

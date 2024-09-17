@@ -2,18 +2,8 @@ import CustomModal from '../CustomModal/customModal.jsx';
 import retratos from '../../images/retratos.png';
 import './retratos.css';
 
-const thumbnailStyle = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    transform: 'translate(-50%, -50%)',
-  },
-};
-
 function getThumbnail(link) {
-  return <img class="modal-content" src={link}/>;
+  return <img src={link}/>;
 }
 function Retratos() {
   let photo1 = "https://plus.unsplash.com/premium_photo-1674581215484-e6242a37c51e?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -32,14 +22,14 @@ function Retratos() {
       </div>
       <div class="body-thumbnails">
         {/* Column 1 */}
-        <div class="g-s-row-1 g-s-col-1 g-row-s-2"><CustomModal buttonID="infoModal" content={getThumbnail(photo1)} caption={getThumbnail(photo1)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>
-        <div class="g-s-row-3 g-s-col-1"><CustomModal buttonID="infoModal" content={getThumbnail(photo4)} caption={getThumbnail(photo4)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>
-        <div class="g-s-row-4 g-s-col-1"><CustomModal buttonID="infoModal" content={getThumbnail(photo6)} caption={getThumbnail(photo6)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>
+        <div class="g-s-row-1 g-s-col-1 g-row-s-2"><CustomModal content={getThumbnail(photo1)} caption={getThumbnail(photo1)} classes="thumbnail"></CustomModal></div>
+        <div class="g-s-row-4 g-s-col-1"><CustomModal content={getThumbnail(photo6)} caption={getThumbnail(photo6)} ></CustomModal></div>
+        <div class="g-s-row-3 g-s-col-1"><CustomModal content={getThumbnail(photo4)} caption={getThumbnail(photo4)} classes="thumbnail"></CustomModal></div>
 
         {/* Column 2 */}
-        <div class="g-s-row-1 g-s-col-2"><CustomModal buttonID="infoModal" content={getThumbnail(photo5)} caption={getThumbnail(photo5)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>
-        <div class="g-s-row-2 g-s-col-2 g-row-s-2"><CustomModal buttonID="infoModal" content={getThumbnail(photo3)} caption={getThumbnail(photo3)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>
-        <div class="g-s-row-4 g-s-col-2"><CustomModal buttonID="infoModal" content={getThumbnail(photo2)} caption={getThumbnail(photo2)} classes="thumbnail" customStyle={thumbnailStyle}></CustomModal></div>
+        <div class="g-s-row-1 g-s-col-2"><CustomModal content={getThumbnail(photo5)} caption={getThumbnail(photo5)} classes="thumbnail"></CustomModal></div>
+        <div class="g-s-row-2 g-s-col-2 g-row-s-2"><CustomModal content={getThumbnail(photo3)} caption={getThumbnail(photo3)} classes="thumbnail"></CustomModal></div>
+        <div class="g-s-row-4 g-s-col-2"><CustomModal content={getThumbnail(photo2)} caption={getThumbnail(photo2)} classes="thumbnail"></CustomModal></div>
       </div>
     </div>
   );
