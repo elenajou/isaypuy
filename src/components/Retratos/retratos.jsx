@@ -23,7 +23,7 @@ function Retratos() {
       <div class="body-thumbnails">
         {/* Column 1 */}
         <div class="g-s-row-1 g-s-col-1 g-row-s-2"><CustomModal content={getThumbnail(photo1)} caption={getThumbnail(photo1)} classes="thumbnail"></CustomModal></div>
-        <div class="g-s-row-4 g-s-col-1"><CustomModal content={getThumbnail(photo6)} caption={getThumbnail(photo6)} ></CustomModal></div>
+        <div class="g-s-row-4 g-s-col-1"><CustomModal content={getThumbnail(photo6)} caption={getThumbnail(photo6)} classes="thumbnail"></CustomModal></div>
         <div class="g-s-row-3 g-s-col-1"><CustomModal content={getThumbnail(photo4)} caption={getThumbnail(photo4)} classes="thumbnail"></CustomModal></div>
 
         {/* Column 2 */}

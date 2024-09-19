@@ -34,49 +34,80 @@
   margin: 10px;
 }
 
-/* #invitation .button {
-  position: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  justify-self: center;
-  width: 100%;
-  height: 70%;
-} */
-
-.ReactModal__Content--after-open .body{ 
+.ReactModal__Content--after-open .modal-body{ 
   display: flex;
   flex-direction: column;
-  height: 400px;
-  width: 100%;
+  width: 85vw;
+  padding: 15px;
+  max-height: 80vh;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #fffcfa;
-  padding: 10%;
+  background-color: var(--pale-bg);
   text-align: center;
+  background-image: url('../../images/rsvp-bg.png');
+  background-size: contain;
+}
+
+.modal-body > *, .modal-body > * > * {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin: 5px 0 5px 0;
+  font-size: 15px;
 }
 
 .ReactModal__Content--after-open .rsvp-title {
-  font-size: 50px;
+  font-family: "Playfair", serif;
+  font-size: 120px;
+  font-weight: 500;
+  color: var(--sec-dark);
 }
-.ReactModal__Content--after-open .rsvp-name {
-  font-size: 30px;
-}
-.ReactModal__Content--after-open .rsvp-contact {
-  font-size: 20px;
-}
-.ReactModal__Content--after-open .rsvp-seats {
-  font-size: 20px;
-}
-.ReactModal__Content--after-open .rsvp-btn-confirm, 
-.ReactModal__Content--after-open .rsvp-btn-reject {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
-  position: relative;
-  font-size: 20px;
-  align-self: center;
+#rsvp-search-name, #rsvp-search-number{
+  color: black;
+  width: 90%;
   justify-self: center;
+  align-self: center;
+  border: solid 1px var(--sec);
+  border-radius: 4px;
+  height: 35px;
+  margin: 5px;
 }
 
+
+.ReactModal__Content--after-open .rsvp-name {
+  font-family: "Tangerine", cursive;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.ReactModal__Content--after-open .rsvp-contact,
+.ReactModal__Content--after-open .rsvp-seats {
+  display: flex;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
 .ReactModal__Content--after-open #rsvp-msg {
   color: black;
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  border: solid 1px var(--sec);
+  border-radius: 4px;
+  height: 35px;
+  margin: 5px;
+}
+.ReactModal__Content--after-open .rsvp-btn {
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; */
+  position: relative;
+  display: flex;
+  font-size: 15px;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+}
+
+.rsvp-btn .button {
+  position: relative;
+  width: 45%;
+  font-size: 14px;
 }

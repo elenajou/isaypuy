@@ -6,11 +6,10 @@ import DOMPurify from 'dompurify';
 
 import './customModal.css';
 
-function CustomModal({caption, classes, buttonID, customStyle, content}) {
+function CustomModal({caption, classes, buttonID, customStyle, content, onBtnClick}) {
   // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
   Modal.setAppElement(document.getElementById(buttonID));
-  
-  let subtitle;
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -36,9 +35,9 @@ function CustomModal({caption, classes, buttonID, customStyle, content}) {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyle}
-        contentLabel="Example Modal"
+        contentLabel="Modal"
       >
-        <div class="modal-body">
+        <div>
         {/* <button id="btn-close" onClick={closeModal}></button> */}
           <div>{content}</div>
         </div>
