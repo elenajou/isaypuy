@@ -3,7 +3,17 @@ import CustomModal from '../CustomModal/customModal.jsx';
 
 import './invitation.css';
 
-let ceremoniaHTML = <div>ceremonia</div>;
+let ceremoniaHTML = <div class="body">
+  <div class="rsvp-title">RSVP</div>
+  <div class="rsvp-name">Elena Jou</div>
+  <div class="rsvp-contact">Numero de Contacto: 0000-0000</div>
+  <div class="rsvp-seats">Puestos Reservados: 2</div>
+  <label for="rsvp-msg" class="rsvp-caption">Mensaje</label>
+  <input type="text" id="rsvp-msg"/>
+  <div class="rsvp-btn-confirm button">Cuenta conmigo!</div>
+  <div class="rsvp-btn-reject button">No podre asistir</div>
+</div>;
+
 let ceremoniaBtn = <div>CONFIRMAR ASISTENCIA</div>;
 let lugarHTML = <div>lugar</div>;
 let lugarBtn = <div>COMO LLEGAR?</div>;

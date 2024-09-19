@@ -4,7 +4,13 @@
   max-height: unset;
 }
 
+/* This class locks the body scroll */
+.body-lock {
+  overflow: hidden;
+}
+
 .ReactModal__Overlay--after-open {
+  position: fixed;
   max-height: 100vh!important;
   display: grid;
   width: 100%;
@@ -14,8 +20,8 @@
   position: relative!important;
   display: grid;
   padding: 0!important;
-  width: 85vw;
-  height: max-content!important;
+  width: max-content;
+  height: max-content;
   align-self: center;
   justify-self: center;
   justify-content: center;

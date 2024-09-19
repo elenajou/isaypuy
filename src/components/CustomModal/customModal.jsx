@@ -18,11 +18,13 @@ function CustomModal({caption, classes, buttonID, customStyle, content}) {
   }
 
   function afterOpenModal() {
+    document.body.classList.add('body-lock');
     // references are now sync'd and can be accessed.
     subtitle.style.color = '#f00';
   }
 
   function closeModal() {
+    document.body.classList.remove('body-lock');
     setIsOpen(false);
   }
   
