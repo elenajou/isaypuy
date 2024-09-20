@@ -12,19 +12,11 @@ function Invitation() {
   const [loading, setLoading] = useState(true);
 
   const toggleSearchModalContent = () => {
-    setLoading(true);
-    setTimeout(() => { // Simulate loading delay
-      setCeremoniaModal(searchHTML);
-      setLoading(false);
-    }, 500); // Adjust delay as needed
+    setCeremoniaModal(searchHTML);
   };
 
   const toggleInvitacionModalContent = () => {
-    setLoading(true);
-    setTimeout(() => { // Simulate loading delay
       setCeremoniaModal(invitacionHTML);
-      setLoading(false);
-    }, 500); // Adjust delay as needed
   };
 
   const searchHTML = <div class="modal-body">
@@ -50,11 +42,8 @@ function Invitation() {
   </div>;
 
   // Default content for modal is 'ceremoniaHTML'
-  useEffect(() => {
-    // Set initial content for modal
+  if (!ceremoniaModal)
     setCeremoniaModal(searchHTML);
-    setLoading(false); // Assume initial load is immediate, adjust as needed
-  }, []);
 
   return (
     <div id="invitation">

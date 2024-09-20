@@ -76,23 +76,24 @@
   font-family: "Tangerine", cursive;
   font-size: 50px;
   margin-bottom: 10px;
+  color: black;
 }
-.ReactModal__Content--after-open .rsvp-contact,
-.ReactModal__Content--after-open .rsvp-seats {
+.rsvp-contact, .rsvp-seats, .rsvp-caption {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-self: center;
   align-self: center;
+  color: var(--sec-dark)
 }
 .ReactModal__Content--after-open #rsvp-msg {
-  color: black;
   width: 90%;
   justify-self: center;
   align-self: center;
   border: solid 1px var(--sec);
   border-radius: 4px;
   height: 35px;
-  margin: 5px;
+  margin: 0px 5px 5px 5px;
+  color: var(--sec-dark);
 }
 .ReactModal__Content--after-open .rsvp-btn {
   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; */
