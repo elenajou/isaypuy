@@ -78,12 +78,7 @@
   margin-bottom: 10px;
   color: black;
 }
-<<<<<<< HEAD
 .rsvp-contact, .rsvp-seats, .rsvp-caption {
-=======
-.ReactModal__Content--after-open .rsvp-phone,
-.ReactModal__Content--after-open .rsvp-seats {
->>>>>>> moreinfo
   display: flex;
   width: 90%;
   justify-self: center;
