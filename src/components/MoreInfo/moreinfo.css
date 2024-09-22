@@ -76,22 +76,22 @@
   width: 85vw;
 }
 .dressCode-title {
-  position: fixed;
+  /* position: fixed; */
 }
 .dressCode-info {
-  margin-top: 15%;
-  display: flex;
+  /* margin-top: 15%; */
+  /* display: flex; */
   object-fit: contain;
 
 }
 .dressCode-info-slide {
-  min-width: 85vw;
+  max-width: 85vw;
   overflow: hidden;
 }
 .dressCode-caption {
   display: block;
   font-family: "Playfair", serif;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
   margin-top: 10%;
 }
@@ -128,4 +128,5 @@
 }
 .info-answer {
   text-align: left;
+  color: black;
 }

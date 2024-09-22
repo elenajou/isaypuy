@@ -7,43 +7,64 @@ import suits from '../../images/suits.png';
 
 import './moreinfo.css';
 
+const qa = [
+  {
+    question: "¿Hasta cuándo puedo confirmar mi asistencia?", 
+    answer: "Tienes hasta el 10 de enero de 2024 para confirmar. De no poder confirmar hasta esa fecha se entenderá de que no podrán asistir."
+  }, {
+    question: "Si me quiero hospedar en el hotel después del evento, ¿Cómo sería la logística?", 
+    answer: "Para reservas de habitación, contamos con tarifa especial para nuestros invitados y la misma tiene un costo de $105 en Sheraton y $85 en Aloft por noche. Estos precios son para 2 dos personas con desayuno incluidos y por persona adicional (persona mayor a 13 años) serian $30 en Sheraton y $25 en Aloft hasta 4 personas por habitación. Niños de 0-5 años solo pagarían el 50% del desayuno y 6-13 años pagan $14. Para reservas o más información contactar a los correos: reservas@sheratongrandpanama.com / reservas@aloftpanama.com e indicar que para la boda del Felipe y Alicia del día 27 de enero.Teléfono de contacto en el hotel: 305-6560"
+  }, {
+    question: "¿Puedo asistir para la ceremonia civil?",
+    answer: "Tenemos puestos limitados para la ceremonia civil, puedes confirmar con nosotros al privado por puestos adicionales."
+  }, {
+    question: "¿Puedo traer a un plus +1?",
+    answer: "Confirma con nosotros para puestos adicionales."
+  }
+];
+const dressType = [
+  {
+    caption: "Gentlemen",
+    image: suits,
+    children: ""
+  }, {
+    caption: <div>&darr;</div>,
+    image: "",
+    children: ""
+  }, {
+    caption: "Ladies",
+    image: dresses,
+    children: ""
+  }, {
+    caption: "AVOID THIS",
+    image: "",
+    children: <ul><li>Red dresses</li><li>Navy Green dresses</li><li>White Suit</li></ul>
+  }
+];
+
 const dressCodeBtn = <div>SUGERENCIAS</div>;
 const infoBtn = <div>+ INFO</div>;
 
 const dressCodeModalHTML = <div className="dressCode-modal-body">
   <div className="dressCode-title">Formal</div>
   <div className='dressCode-info'>
-    <div className="dressCode-info-slide">
-      <div className='dressCode-caption'>Gentlemen</div>
-      <img src={suits} alt="" />
-    </div>
-    <div className="dressCode-info-slide">
-      <div className='dressCode-caption'>Ladies</div>
-      <img src={dresses} alt="" />
-    </div>
-    <div className="dressCode-info-slide">
-      <div className='dressCode-caption'>AVOID THIS</div>
-      <ul>
-        <li>Red dresses</li>
-        <li>Navy Green dresses</li>
-        <li>White Suit</li>
-      </ul>
-    </div>
+    {
+      dressType.map(({caption, image, children}) => {
+      return <div className="dressCode-info-slide">
+        <div className='dressCode-caption'>{caption}</div>
+        <img src={image} alt="" />
+        {children}
+      </div>})
+    }
   </div>
 </div>;
 
 const infoModalHTML = <div className="info-modal-body">
   <div className="info-title">Q & A</div>
-  <div className='info-question'>¿Hasta cuándo puedo confirmar mi asistencia?</div>
-  <div className='info-answer'>Tienes hasta el 10 de enero de 2024 para confirmar. De no poder confirmar hasta esa fecha se entenderá de que no podrán asistir.</div>
-  <div className='info-question'>Si me quiero hospedar en el hotel después del evento, ¿Cómo sería la logística?</div>
-  <div className='info-answer'>Para reservas de habitación, contamos con tarifa especial para nuestros invitados y la misma tiene un costo de $105 en Sheraton y $85 en Aloft por noche. Estos precios son para 2 dos personas con desayuno incluidos y por persona adicional (persona mayor a 13 años) serian $30 en Sheraton y $25 en Aloft hasta 4 personas por habitación. Niños de 0-5 años solo pagarían el 50% del desayuno y 6-13 años pagan $14.
-  Para reservas o más información contactar a los correos: reservas@sheratongrandpanama.com / reservas@aloftpanama.com e indicar que para la boda del Felipe y Alicia del día 27 de enero.
-  Teléfono de contacto en el hotel: 305-6560</div>
-  <div className='info-question'>¿Puedo asistir para la ceremonia civil?</div>
-  <div className='info-answer'>Tenemos puestos limitados para la ceremonia civil, puedes confirmar con nosotros al privado por puestos adicionales.</div>
-  <div className='info-question'>¿Puedo traer a un plus +1?</div>
-  <div className='info-answer'>Confirma con nosotros para puestos adicionales.</div>
+  { qa.map(({question, answer}) => {
+    return (<><div className='info-question'>{question}</div>
+    <div className='info-answer'>{answer}</div></>)
+  })}
 </div>;
 
 function MoreInfo() {
@@ -57,14 +78,6 @@ function MoreInfo() {
         </div>
         <CustomModal buttonID="sugerenciaModal" content={dressCodeModalHTML} caption={dressCodeBtn} classes="button card-button"></CustomModal>
       </div>
-      {/* <div className="card">
-        <div>
-          <div className="card-title">Tips y Notas</div>
-          <div className="card-icon"><img src={notes}/></div>
-          <div className="card-caption">Información adicional para tener en cuenta.</div>
-        </div>
-        <CustomModal buttonID="infoModal" content={infoModalHTML} caption={dressCodeBtn} classes="button  card-button"></CustomModal>
-      </div> */}
       <div className="card">
         <div>
           <div className="card-title">Q & A</div>
