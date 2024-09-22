@@ -4,11 +4,6 @@
   max-height: unset;
 }
 
-/* This class locks the body scroll */
-.body-lock {
-  overflow: hidden;
-}
-
 .ReactModalPortal {
   width: 100%;
 }

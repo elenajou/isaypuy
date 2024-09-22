@@ -4,8 +4,6 @@ import CustomModal from '../CustomModal/customModal.jsx';
 import './invitation.css';
 
 let ceremoniaBtn = <div>CONFIRMAR ASISTENCIA</div>;
-let lugarHTML = <div>lugar</div>;
-let lugarBtn = <div>COMO LLEGAR?</div>;
 
 function Invitation() {
   const [ceremoniaModal, setCeremoniaModal] = useState(null);
@@ -17,15 +15,6 @@ function Invitation() {
   const toggleInvitacionModalContent = () => {
       setCeremoniaModal(invitacionHTML);
   };
-
-  // const searchHTML = <div class="modal-body">
-  //   <div class="rsvp-title">RSVP</div>
-  //   <input type="text" name="search-name" id="rsvp-search-name" class="rsvp-input" placeholder='Nombre'/>
-  //   <input type="text" name="search-number" id="rsvp-search-number" class="rsvp-input" placeholder='Numero WhatsApp'/>
-  //   <div class="rsvp-btn">
-  //     <button class="button" onClick={toggleInvitacionModalContent}>BUSCAR</button>
-  //   </div>
-  // </div>;
 
   const searchHTML = <form class="rsvp-modal-body form-inputs" method="post" action="javascript:populateData();">
     <div class="rsvp-title">RSVP</div>
@@ -64,14 +53,9 @@ function Invitation() {
       <div class="information">
         <div class="ceremonia">
           <h2>Ceremonia</h2>
-          <p>Dia <span>25 de Enero, 2025</span></p>
+          <p><span>25 de Enero de 2025</span></p>
           <CustomModal buttonID="ceremonia" content={ceremoniaModal} caption={ceremoniaBtn} classes="button" onBtnClick={toggleSearchModalContent}>
           </CustomModal>
-        </div>
-        <div class="lugar">
-          <h2>Lugar</h2>
-          <p>Boquete, Chiriqui</p>
-          <CustomModal buttonID="lugar" content={lugarHTML} caption={lugarBtn} classes="button"></CustomModal>
         </div>
       </div>
     </div>

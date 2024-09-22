@@ -1,16 +1,17 @@
 #invitation {
   position: relative;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  height: 100vh;
+  height: max-content;
   width: 100%;
   overflow: hidden;
   background-image: url('../../images/invitation.png');
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-color: white;
+  background-position: bottom;
+  transform: rotate(180deg);
 }
 
 #invitation h2 {
@@ -18,13 +19,14 @@
 }
 
 .information {
+  transform: rotate(180deg);
   display: grid;
   width: 80%;
-  height: 70vh;
+  height: 30vh;
 }
-.ceremonia, .lugar {
+.ceremonia {
   display: grid;
-  align-self: center;
+  /* align-self: center; */
   justify-self: center;
   height: max-content;
   width: 80%;

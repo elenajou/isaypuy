@@ -1,0 +1,42 @@
+#schedule {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('../../images/invitation.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+}
+
+#schedule h2 {
+  font-size: 3em;
+}
+#schedule h2 span{
+  font-family: "Tangerine", cursive;
+}
+#schedule-all-events {
+  width: 70vw;
+  list-style-type: none;
+}
+.schedule-event {
+  margin-top: 10%;
+  font-size: 1.1em;
+  text-align: left;
+  height: max-content;
+  display: flex;
+}
+.schedule-event {
+  justify-content: center;
+  align-items: center;
+}
+.schedule-event img {
+  max-width: 50px;
+  /* transform: translate(0, -20%); */
+  margin-right: 10px;
+}

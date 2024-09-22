@@ -60,7 +60,7 @@
   border: unset!important;
   background: #8ca6aa!important;
 }
-.ReactModal__Content--after-open .dressCode-modal-body{ 
+.dressCode-modal-body, .info-modal-body{ 
   display: grid;
   flex-direction: column;
   width: 85vw;
@@ -68,32 +68,34 @@
   height: max-content;
   text-align: center;
 }
-.ReactModal__Content--after-open .dressCode-title {
-  position: fixed;
+.dressCode-title, .info-title {
   font-family: "Playfair", serif;
   font-size: 50px;
   font-weight: 500;
   color: white;
   width: 85vw;
 }
-.ReactModal__Content--after-open .dressCode-info {
+.dressCode-title {
+  position: fixed;
+}
+.dressCode-info {
   margin-top: 15%;
   display: flex;
   object-fit: contain;
 
 }
-.ReactModal__Content--after-open .dressCode-info-slide {
+.dressCode-info-slide {
   min-width: 85vw;
   overflow: hidden;
 }
-.ReactModal__Content--after-open .dressCode-caption {
+.dressCode-caption {
   display: block;
   font-family: "Playfair", serif;
   font-size: 20px;
   color: white;
   margin-top: 10%;
 }
-.ReactModal__Content--after-open img {
+.dressCode-info img {
   position: relative;
   display: flex;
   align-self: center;
@@ -102,8 +104,28 @@
   space-around;
   box-shadow: none;
 }
-.ReactModal__Content--after-open ul {
+.dressCode-info ul {
   margin-top: 10%;
   list-style-type: none;
   color: white
+}
+
+.info-title {
+  font-family: "Playfair", serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+  width: 85vw;
+}
+
+.info-question {
+  display: block;
+  font-family: "Playfair", serif;
+  font-size: 20px;
+  color: white;
+  margin-top: 10%;
+  text-align: left;
+}
+.info-answer {
+  text-align: left;
 }
