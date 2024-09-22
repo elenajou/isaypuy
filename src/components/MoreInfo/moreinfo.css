@@ -3,7 +3,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 800px;
   overflow: hidden;
   background-color: #4A5759;
   color: #2F3E46;
@@ -14,26 +14,28 @@
   display: grid;
   flex-direction: column;
   background-color: white;
+  min-height: 280px;
+  height: 70%;
   max-height: 300px;
-  height: 90%;
-  max-width: 70vw;
+  width: 70vw;
   align-self: center;
-  display: flex;
   border-radius: 5%;
   box-shadow: 8px 8px 20px 1px rgba(0, 0, 0, 0.206);
+  padding: 20px;
 }
 
 .card .card-title {
+  width: 100%;
   justify-self: center;
-  margin-top: 40px;
+  margin: 20px 0px 0px 0px;
   font-size: 2em;
   font-weight: bold;
 }
 
 .card .card-icon {
-  margin-top: 0px;
-  height: 10vw;
-  max-height: 50px;
+  margin-top: 10%;
+  height: 60%;
+  max-height: 70px;
 }
 
 .card .card-icon img {
@@ -43,10 +45,65 @@
 
 .card .card-caption {
   height: max-content;
-  margin: 3% 4% 1% 4%;
+  width: 100%;
+  margin: 3% 0% 0% 0%;
   font-size: 1em;
 }
 
 .card-button {
   bottom: 6%;
+}
+
+.ReactModal__Content--after-open {
+  display: flex;
+  max-height: 70vh;
+  border: unset!important;
+  background: #8ca6aa!important;
+}
+.ReactModal__Content--after-open .dressCode-modal-body{ 
+  display: grid;
+  flex-direction: column;
+  width: 85vw;
+  padding: 15px;
+  height: max-content;
+  text-align: center;
+}
+.ReactModal__Content--after-open .dressCode-title {
+  position: fixed;
+  font-family: "Playfair", serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+  width: 85vw;
+}
+.ReactModal__Content--after-open .dressCode-info {
+  margin-top: 15%;
+  display: flex;
+  object-fit: contain;
+
+}
+.ReactModal__Content--after-open .dressCode-info-slide {
+  min-width: 85vw;
+  overflow: hidden;
+}
+.ReactModal__Content--after-open .dressCode-caption {
+  display: block;
+  font-family: "Playfair", serif;
+  font-size: 20px;
+  color: white;
+  margin-top: 10%;
+}
+.ReactModal__Content--after-open img {
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  justify-content: 
+  space-around;
+  box-shadow: none;
+}
+.ReactModal__Content--after-open ul {
+  margin-top: 10%;
+  list-style-type: none;
+  color: white
 }
