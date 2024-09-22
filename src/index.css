@@ -109,3 +109,8 @@ button:focus-visible {
   transform: translateY(1.5px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 } 
+
+/* This class locks the body scroll */
+.body-lock {
+  overflow: hidden;
+}

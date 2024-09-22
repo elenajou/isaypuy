@@ -9,7 +9,6 @@ let lugarBtn = <div>COMO LLEGAR?</div>;
 
 function Invitation() {
   const [ceremoniaModal, setCeremoniaModal] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   const toggleSearchModalContent = () => {
     setCeremoniaModal(searchHTML);
