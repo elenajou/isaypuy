@@ -36,15 +36,15 @@ function Countdown() {
   return (
     <div id="countdown">
       <img id="countdown-img" src={countdown} alt="IsaYPuy"/>
-      {/* <div class="title">Falta</div> */}
+      {/* <div className="title">Falta</div> */}
       <div id="clock">
-        <div class="count">
+        <div className="count">
           <span id="days"></span>
           <span id="hr"></span>
           <span id="min"></span>
           <span id="sec"></span>
         </div>
-        <div class="caption">          
+        <div className="caption">          
           <span id="dias">Dias</span>
           <span id="horas">Horas</span>
           <span id="minutos">Minutos</span>

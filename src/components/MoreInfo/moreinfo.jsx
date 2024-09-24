@@ -4,6 +4,7 @@ import notes from '../../images/notes-icon.png';
 import CustomModal from '../CustomModal/customModal.jsx';
 import dresses from '../../images/dresses.png';
 import suits from '../../images/suits.png';
+import avoid from '../../images/avoidDress.png';
 
 import './moreinfo.css';
 
@@ -36,9 +37,9 @@ const dressType = [
     image: dresses,
     children: ""
   }, {
-    caption: "AVOID THIS",
-    image: "",
-    children: <ul><li>Red dresses</li><li>Navy Green dresses</li><li>White Suit</li></ul>
+    caption: "EVITA ESTOS COLORES",
+    image: avoid,
+    children: ""
   }
 ];
 
@@ -47,10 +48,10 @@ const infoBtn = <div>+ INFO</div>;
 
 const dressCodeModalHTML = <div className="dressCode-modal-body">
   <div className="dressCode-title">Formal</div>
-  <div className='dressCode-info'>
+  <div className="dressCode-info">
     {
       dressType.map(({caption, image, children}) => {
-      return <div className="dressCode-info-slide">
+      return <div key={caption} className="dressCode-info-slide">
         <div className='dressCode-caption'>{caption}</div>
         <img src={image} alt="" />
         {children}
@@ -59,11 +60,11 @@ const dressCodeModalHTML = <div className="dressCode-modal-body">
   </div>
 </div>;
 
-const infoModalHTML = <div className="info-modal-body">
+const infoModalHTML = <div key={16} className="info-modal-body">
   <div className="info-title">Q & A</div>
   { qa.map(({question, answer}) => {
-    return (<><div className='info-question'>{question}</div>
-    <div className='info-answer'>{answer}</div></>)
+    return (<><div key={question} className='info-question'>{question}</div>
+    <div key={answer.length} className='info-answer'>{answer}</div></>)
   })}
 </div>;
 

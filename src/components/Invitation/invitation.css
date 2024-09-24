@@ -1,7 +1,6 @@
 #invitation {
   position: relative;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   height: max-content;
   width: 100%;
@@ -22,7 +21,9 @@
   transform: rotate(180deg);
   display: grid;
   width: 80%;
-  height: 30vh;
+  height: 50vh;
+  /* align-content: center; */
+  margin-bottom: 20%;
 }
 .ceremonia {
   display: grid;
@@ -105,7 +106,9 @@
   justify-self: center;
   justify-content: space-around;
 }
-
+#populateData {
+  display: grid;
+}
 .rsvp-btn .button {
   position: relative;
   width: 45%;
