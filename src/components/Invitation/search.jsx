@@ -11,15 +11,12 @@ function SearchFields ({ onSearch }) {
     await onSearch({ phone });
   }
   return <div id="populateForm">
-    <label htmlFor="rsvp-search-number">
-      WhatsApp / Numero de celular
-    </label>
     <input 
       type="number" 
       id="rsvp-search-number" 
       className="rsvp-input" 
       name="whatsapp" 
-      placeholder="61234123" 
+      placeholder="WhatsApp / Numero de celular" 
       min="60000000" 
       max="9999999999"
       value={phone}
@@ -164,7 +161,7 @@ function Search() {
   const [inviteDetails, setInviteDetails] = useState(null);
 
   const handleSearch = async ({ phone }) => {
-    setInviteDetails(<div>Loading...</div>);
+    setInviteDetails(<div className="rsvp-caption">Loading...</div>);
     const details = await fetchInviteData({ phone });
     if (!details) {
       // If no data is found, update the search message
