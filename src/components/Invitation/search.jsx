@@ -1,36 +1,30 @@
 import { useState, useEffect } from 'react';
-import { collection, query, where, limit, getDocs } from 'firebase/firestore';
+import { collection, doc, query, where, limit, getDocs, updateDoc } from 'firebase/firestore';
 import { db } from '../../scripts/firebase.js';
 
 const ceremoniaBtn = <div>Confirmar Asistencia</div>;
 
 function SearchFields ({ onSearch }) { 
-  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
   const handleSearch = async () => {
-    await onSearch({ name, phone });
+    await onSearch({ phone });
   }
   return <div id="populateForm">
-    <input 
-      type="text" 
-      id="rsvp-search-name" 
-      className="rsvp-input" 
-      name="name" 
-      placeholder="Nombre / Name"
-      value={name}
-      onChange={(e) => setName(e.target.value)}
-    />
+    <label htmlFor="rsvp-search-number">
+      WhatsApp / Numero de celular
+    </label>
     <input 
       type="number" 
       id="rsvp-search-number" 
       className="rsvp-input" 
       name="whatsapp" 
-      placeholder="Whatsapp / Phone Number" 
+      placeholder="61234123" 
       min="60000000" 
       max="9999999999"
       value={phone}
       onChange={(e) => setPhone(e.target.value)}
+      required
     />
     <button 
       type="button" 
@@ -43,7 +37,99 @@ function SearchFields ({ onSearch }) {
   </div>
 }
 
+function InviteData({docID, name, phone, reservedSeats, msg}) {
+  const [message, setMessage] = useState(msg);
+  const [seats, setSeats] = useState(reservedSeats);
+  const [confirmation, setConfirmation] = useState("");
+  function acceptRSVP() {
+    try {
+      const docRef = doc(db, 'invitados', docID);
+      updateDoc(docRef, {
+        msg: message,
+        confirmedSeats: seats,
+        confirmed: true,
+        declined: false
+      });
+      changeConfirmation(true);
+      console.log("RSVP successfully updated");
+    } catch (error) {
+      console.log('docID: ', docID);
+      console.error('Error saving RSVP: ', error);
+    }
+  }
+  function declineRSVP() {
+    try {
+      const docRef = doc(db, 'invitados', docID);
+      updateDoc(docRef, {
+        msg: message,
+        confirmedSeats: seats,
+        confirmed: false,
+        declined: true
+      });
+      changeConfirmation(false);
+      console.log("RSVP successfully updated");
+    } catch (error) {
+      console.log('docID: ', docID);
+      console.error('Error saving RSVP: ', error);
+    }
+  }
+  const handleSeatChange = (e) => {
+    const value = Number(e.target.value); // Convert to number
+    if (value >= 0 && value <= reservedSeats) {
+      setSeats(value);
+    } else {
+      // Optionally handle cases where the input is out of bounds
+      if (value > reservedSeats) {
+        setSeats(reservedSeats); // Set to max if exceeded
+      } else if (value < 0) {
+        setSeats(0); // Reset to 0 if negative
+      }
+    }
+  }
+  function changeConfirmation(type) {
+    if (type == true) {
+      setConfirmation("¡Estamos emocionados de verte en nuestra boda!");
+    } else {
+      setConfirmation("Extrañaremos tu presencia :(");
+    }
+  }
+  return <div id="populateForm">
+    <div className="rsvp-name">{name}</div>
+    <div className="rsvp-caption rsvp-phone">
+      <div>Numero de Contacto:</div>
+      <div className='rsvp-info'>{phone}</div>
+    </div>
+    <div className="rsvp-caption rsvp-seats">
+      <label htmlFor="rsvp-seats">Puestos Reservados:</label>
+      <div className="rsvp-info" >{reservedSeats}</div>
+    </div>
+    <div className="rsvp-caption rsvp-seats">
+      <label className="rsvp-seats" htmlFor="rsvp-seats">Confirmar Puestos:</label>
+      <input 
+        id="rsvp-seats" 
+        className="rsvp-info" 
+        type="number"
+        value={seats}
+        onChange={handleSeatChange}
+      />
+    </div>
+    <label htmlFor="rsvp-msg" className="rsvp-caption">Deja un mensaje</label>
+    <input 
+      type="text" 
+      id="rsvp-msg" 
+      value={message}
+      onChange={(e) => setMessage(e.target.value)}
+    />
+    <div className="rsvp-btn">
+      <button className="button" onClick={acceptRSVP}>Estare ahi!</button>
+      <button className="button" onClick={declineRSVP}>No puedo</button>
+    </div>
+    <div className="sad">{confirmation}</div>
+  </div>
+}
+
 async function fetchInviteData({ name, phone }) {
+  
   const invitadosRef = collection(db, 'invitados');
   const q = query(
     invitadosRef,
@@ -58,23 +144,13 @@ async function fetchInviteData({ name, phone }) {
       const thisDoc = doc.data();
 
       return (
-        <div id="populateForm">
-          <div className="rsvp-name">{thisDoc.name}</div>
-          <div className="rsvp-phone">
-            <div>Numero de Contacto:</div>
-            <div>{thisDoc.phone}</div>
-          </div>
-          <div className="rsvp-seats">
-            <div>Puestos Reservados:</div>
-            <div>{thisDoc.reservedSeats}</div>
-          </div>
-          <label htmlFor="rsvp-msg" className="rsvp-caption">Deja un mensaje</label>
-          <input type="text" id="rsvp-msg" />
-          <div className="rsvp-btn">
-            <button className="button">Estare ahi!</button>
-            <button className="button">No puedo :&#40;</button>
-          </div>
-        </div>
+        <InviteData 
+          docID={doc.id}
+          name={thisDoc.name}
+          phone={thisDoc.phone}
+          reservedSeats={thisDoc.reservedSeats}
+          msg={thisDoc.msg}
+        />
       );
     } else {
       console.log("No matching documents found.");
@@ -87,12 +163,12 @@ async function fetchInviteData({ name, phone }) {
 function Search() {
   const [inviteDetails, setInviteDetails] = useState(null);
 
-  const handleSearch = async ({ name, phone }) => {
+  const handleSearch = async ({ phone }) => {
     setInviteDetails(<div>Loading...</div>);
-    const details = await fetchInviteData({ name, phone });
+    const details = await fetchInviteData({ phone });
     if (!details) {
       // If no data is found, update the search message
-      setInviteDetails(<><div id="searchMsg">No encuentro su invitacion. Intenta denuevo</div><SearchFields onSearch={handleSearch} /></>);
+      setInviteDetails(<><SearchFields onSearch={handleSearch} /><div className="sad" id="searchMsg">No encuentro su invitacion. Intenta denuevo</div></>);
     } else {
       setInviteDetails(details);
     }
@@ -104,10 +180,10 @@ function Search() {
       }
     }, [inviteDetails]);
   
-  return <form className="rsvp-modal-body form-inputs">
+  return <div className="rsvp-modal-body form-inputs">
     <div className="rsvp-title">RSVP</div>
     {inviteDetails}
-  </form>;
+  </div>;
 }
 
 export default Search;

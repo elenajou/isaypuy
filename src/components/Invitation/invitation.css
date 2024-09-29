@@ -42,7 +42,7 @@
   flex-direction: column;
   width: 85vw;
   padding: 15px;
-  max-height: 80vh;
+  max-height: 90vh;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--pale-bg);
   text-align: center;
@@ -50,7 +50,7 @@
   background-size: contain;
 }
 
-.rsvp-modal-body > *, .rsvp-modal-body > * > * {
+.rsvp-modal-body  * {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   margin: 5px 0 5px 0;
@@ -59,7 +59,7 @@
 
 .ReactModal__Content--after-open .rsvp-title {
   font-family: "Playfair", serif;
-  font-size: 120px;
+  font-size: 80px;
   font-weight: 500;
   color: var(--sec-dark);
 }
@@ -81,7 +81,7 @@
   margin-bottom: 10px;
   color: black;
 }
-.rsvp-phone, .rsvp-seats, .rsvp-caption {
+.rsvp-caption {
   display: flex;
   width: 90%;
   justify-self: center;
@@ -106,11 +106,30 @@
   justify-self: center;
   justify-content: space-around;
 }
-#populateData {
+#populateForm {
   display: grid;
 }
 .rsvp-btn .button {
   position: relative;
   width: 45%;
   font-size: 14px;
+}
+
+.rsvp-info {
+  width: 45%;
+}
+#rsvp-seats {
+  border: solid 1px var(--sec);
+  border-radius: 4px;
+  height: 25px;
+  margin: 0px 5px 0px 0px;
+  text-align: center;
+  color: var(--sec-dark);
+}
+
+.happy {
+  color: darkgreen;
+}
+.sad {
+  color: brown;
 }
