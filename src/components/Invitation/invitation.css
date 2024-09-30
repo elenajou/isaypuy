@@ -66,7 +66,7 @@
 }
 #rsvp-search-name, #rsvp-search-number{
   color: black;
-  width: 90%;
+  width: 140%;
   justify-self: center;
   align-self: center;
   border: solid 1px var(--sec);
@@ -109,6 +109,10 @@
 }
 #populateForm {
   display: grid;
+  max-width: 400px;
+  justify-content: center;
+  align-content: center;
+  color: var(--sec-dark);
 }
 .rsvp-btn .button {
   position: relative;
@@ -119,14 +123,23 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-.rsvp-info {
-  width: 45%;
+.rsvp-phone {
+  align-self: center;
+  font-size: 0.95em;
+  width: 100%;
 }
+.rsvp-info {
+  width: 25%;
+  text-align: left;
+  justify-self: center;
+}
+
 #rsvp-seats {
   border: solid 1px var(--sec);
   border-radius: 4px;
+  width: 30px;
   height: 25px;
-  margin: 0px 5px 0px 0px;
+  margin: 0px 5px 0px 10px;
   text-align: center;
   color: var(--sec-dark);
 }

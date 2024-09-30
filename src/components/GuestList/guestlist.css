@@ -1,0 +1,37 @@
+#guestList *{
+  display: grid;
+  /* background-color: white; */
+  /* color: black; */
+  font-size: 14px;
+  width: 90vw;
+  font-family: "Montserrat", sans-serif;
+  padding: 3px;
+  align-self: center;
+  justify-self: center;
+}
+#guestList h2 {
+  font-size: 16px;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+}
+.label {
+  width: 40%;
+  font-size: 15px;
+}
+input {
+  width: 40%;
+  justify-self: center;
+  align-self: center;
+  border: solid 1px var(--sec);
+  border-radius: 4px;
+  height: 25px;
+  margin: 0px 5px 5px 5px;
+  color: var(--sec-dark);
+}

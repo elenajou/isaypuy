@@ -12,7 +12,7 @@ function SearchFields ({ onSearch }) {
   }
   return <div id="populateForm">
     <input 
-      type="number" 
+      type="text" 
       id="rsvp-search-number" 
       className="rsvp-input" 
       name="whatsapp" 
@@ -92,25 +92,25 @@ function InviteData({docID, name, phone, reservedSeats, msg}) {
   }
   return <div id="populateForm">
     <div className="rsvp-name">{name}</div>
-    <div className="rsvp-caption rsvp-phone">
+    <div className="rsvp-caption">
       <div>Numero de Contacto:</div>
-      <div className='rsvp-info'>{phone}</div>
+      <div className='rsvp-phone '>{phone}</div>
     </div>
-    <div className="rsvp-caption rsvp-seats">
-      <label htmlFor="rsvp-seats">Puestos Reservados:</label>
+    <div className="rsvp-caption">
+      <label htmlFor="">Puestos Reservados:</label>
       <div className="rsvp-info" >{reservedSeats}</div>
     </div>
-    <div className="rsvp-caption rsvp-seats">
-      <label className="rsvp-seats" htmlFor="rsvp-seats">Confirmar Puestos:</label>
+    <div className="">
+      <label className="" htmlFor="rsvp-seats">Confirmar Puestos:</label>
       <input 
         id="rsvp-seats" 
-        className="rsvp-info" 
+        className="" 
         type="number"
         value={seats}
         onChange={handleSeatChange}
       />
     </div>
-    <label htmlFor="rsvp-msg" className="rsvp-caption">Deja un mensaje</label>
+    <label htmlFor="rsvp-msg" className="rsvp-msg">Deja un mensaje</label>
     <input 
       type="text" 
       id="rsvp-msg" 
