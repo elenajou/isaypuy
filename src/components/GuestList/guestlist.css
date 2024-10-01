@@ -1,37 +1,75 @@
-#guestList *{
+#guestList * :not(button){
   display: grid;
-  /* background-color: white; */
-  /* color: black; */
   font-size: 14px;
-  width: 90vw;
+  width: max-content;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   padding: 3px;
   align-self: center;
-  justify-self: center;
+  background-color: transparent;
+  max-width: unset;
 }
 #guestList h2 {
-  font-size: 16px;
+  font-size: 18px;
+  text-decoration: underline;
+  padding: 12px 0 12px 0;
 }
-section {
+#guestList section {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.field {
+#guestList  .field {
   display: flex;
 }
-.label {
-  width: 40%;
+#guestList .label {
+  width: 40vw;
   font-size: 15px;
 }
-input {
-  width: 40%;
+#guestList input {
+  max-width: 30vw;
   justify-self: center;
-  align-self: center;
+  align-self: left;
   border: solid 1px var(--sec);
   border-radius: 4px;
   height: 25px;
   margin: 0px 5px 5px 5px;
   color: var(--sec-dark);
+}
+#guestList .button {
+  position: relative;
+  width: max-content;
+  font-family: 'Montserrat', sans-serif;
+  border: transparent!important;
+  margin: 2px;
+}
+#allGuestList th {
+  text-align: left;
+  width: 125px;
+}
+#allGuestList tr{
+  display: flex;
+  font-size: 20px;
+}
+#allGuestList td{
+  width: 125px;
+}
+#allGuestList tr:nth-of-type(even){
+  background-color: rgb(235, 235, 235);
+}
+
+#allGuestList .phone {
+  width: 150px;
+}
+#allGuestList .msg{
+  width: 250px;
+}
+#allGuestList .reservedSeats,
+#allGuestList .confirm{
+  width: 90px;
+}
+
+.error {
+  color: brown;
 }
