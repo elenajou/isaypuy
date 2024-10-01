@@ -1,3 +1,4 @@
+import PhoneInput from 'react-phone-number-input/input'
 import { useState, useEffect } from 'react';
 import { collection, doc, query, where, limit, getDocs, updateDoc } from 'firebase/firestore';
 import { db } from '../../scripts/firebase.js';
@@ -11,18 +12,11 @@ function SearchFields ({ onSearch }) {
     await onSearch({ phone });
   }
   return <div id="populateForm">
-    <input 
-      type="text" 
-      id="rsvp-search-number" 
-      className="rsvp-input" 
-      name="whatsapp" 
-      placeholder="WhatsApp / Numero de celular" 
-      min="60000000" 
-      max="9999999999"
-      value={phone}
-      onChange={(e) => setPhone(e.target.value)}
-      required
-    />
+    <PhoneInput
+          id="rsvp-search-number"
+          placeholder="WhatsApp / Numero de celular" 
+          value={phone}
+          onChange={setPhone} />
     <button 
       type="button" 
       onClick={handleSearch} 
@@ -59,7 +53,7 @@ function InviteData({docID, name, phone, reservedSeats, msg}) {
       const docRef = doc(db, 'invitados', docID);
       updateDoc(docRef, {
         msg: message,
-        confirmedSeats: seats,
+        confirmedSeats: 0,
         confirmed: false,
         declined: true
       });

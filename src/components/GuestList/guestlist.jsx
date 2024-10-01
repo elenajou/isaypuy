@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import PhoneInput from 'react-phone-number-input/input'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { db } from '../../scripts/firebase.js';
 import AddGuest from './AddGuest/addGuest.jsx';
@@ -33,6 +32,7 @@ function GuestList() {
 
   // Function to calculate the total reserved seats
   const calculateTotalRSeats = () => {
+    console.log()
     return allGuests.reduce((total, guest) => total + guest.reservedSeats, 0);
   };
   // Function to calculate the total confirmed seats
@@ -53,7 +53,7 @@ function GuestList() {
   return (<div id="guestList">
     <AddGuest/>
     <ModifyGuest/>
-    
+
     <div id="allGuestList">
       <h2>Aqui estan todos los invitados en el sistema</h2>
       <h3>Puestos Reservados: {calculateTotalRSeats()}</h3>
