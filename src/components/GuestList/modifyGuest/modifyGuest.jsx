@@ -52,7 +52,7 @@ function ModifyGuest() {
   });
   return (
     <div className="section-add-guest">
-      <h2>Aqui agregas nuevos invitados </h2>
+      <h2>Aqui modificas invitaciones </h2>
       <div className="field">
         <div className="label" htmlFor="addGuestName">Nombre Completo</div>
         <input 
