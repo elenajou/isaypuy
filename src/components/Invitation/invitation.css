@@ -22,8 +22,7 @@
   transform: rotate(180deg);
   display: grid;
   width: 80%;
-  height: 50vh;
-  /* align-content: center; */
+  height: 250px;
   margin-bottom: 20%;
 }
 .ceremonia {
@@ -41,14 +40,17 @@
 .ReactModal__Content--after-open .rsvp-modal-body{ 
   display: flex;
   flex-direction: column;
-  width: 85vw;
+  width: 100%;
+  max-width: 425px;
   padding: 15px;
-  max-height: 90vh;
+  height: max-content;
+  max-height: 800px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--pale-bg);
   text-align: center;
   background-image: url('../../images/rsvp-bg.png');
   background-size: contain;
+  box-sizing: border-box;
 }
 
 .rsvp-modal-body  * {

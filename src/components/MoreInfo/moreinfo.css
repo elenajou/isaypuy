@@ -3,6 +3,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  justify-items: center;
   min-height: 800px;
   overflow: hidden;
   background-color: #4A5759;
@@ -11,13 +12,13 @@
 
 .card {
   position: relative;
-  display: grid;
+  display: flex;
   flex-direction: column;
   background-color: white;
   min-height: 280px;
   height: 70%;
   max-height: 300px;
-  width: 70vw;
+  width: 70%;
   align-self: center;
   border-radius: 5%;
   box-shadow: 8px 8px 20px 1px rgba(0, 0, 0, 0.206);
@@ -56,33 +57,28 @@
 
 .ReactModal__Content--after-open {
   display: flex;
+  width: 85vw;
+  max-width: 375px;
   max-height: 70vh;
   border: unset!important;
   background: #8ca6aa!important;
 }
 .dressCode-modal-body, .info-modal-body{ 
-  display: grid;
+  display: flex;
   flex-direction: column;
-  width: 85vw;
   padding: 15px;
   height: max-content;
   text-align: center;
+  box-sizing: border-box;
 }
 .dressCode-title, .info-title {
   font-family: "Playfair", serif;
   font-size: 50px;
   font-weight: 500;
   color: white;
-  width: 85vw;
-}
-.dressCode-title {
-  /* position: fixed; */
 }
 .dressCode-info {
-  /* margin-top: 15%; */
-  /* display: flex; */
   object-fit: contain;
-
 }
 .dressCode-info-slide {
   max-width: 85vw;
@@ -108,14 +104,6 @@
   margin-top: 10%;
   list-style-type: none;
   color: white
-}
-
-.info-title {
-  font-family: "Playfair", serif;
-  font-size: 50px;
-  font-weight: 500;
-  color: white;
-  width: 85vw;
 }
 
 .info-question {

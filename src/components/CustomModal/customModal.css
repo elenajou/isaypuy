@@ -11,8 +11,8 @@
 .ReactModal__Overlay--after-open {
   position: fixed;
   display: flex;
-  max-height: 100vh!important;
-  width: 100vw;
+  max-height: 100%!important;
+  width: 100%;
   display: grid;
 }
 

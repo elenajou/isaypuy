@@ -7,8 +7,6 @@
   height: max-content;
   overflow: hidden;
   color: white;
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
 }
 
 .retratos-bg {
@@ -61,7 +59,7 @@
   grid-template-rows: min-content min-content min-content min-content;
   grid-template-columns: auto auto;
   gap: 0.5em;
-  width: 90vw;
+  width: 90%;
   padding-bottom: 1.5em;
 }
 .thumbnail {
