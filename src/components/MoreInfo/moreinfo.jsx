@@ -71,16 +71,16 @@ const infoModalHTML = <div key={16} className="info-modal-body">
 function MoreInfo() {
   return (
     <div id="moreinfo">
-      <div className="card">
-        <div>
+      <div className="card-body">
+        <div className="card-content">
           <div className="card-title">Código de Vestimenta</div>
           <div className="card-icon"><img src={tie}/></div>
           <div className="card-caption">Una orientación para tu vestuario</div>
         </div>
         <CustomModal buttonID="sugerenciaModal" content={dressCodeModalHTML} caption={dressCodeBtn} classes="button card-button"></CustomModal>
       </div>
-      <div className="card">
-        <div>
+      <div className="card-body">
+        <div className="card-content">
           <div className="card-title">Q & A</div>
           <div className="card-icon"><img src={notes}/></div>
           <div className="card-caption">Información adicional del evento</div>

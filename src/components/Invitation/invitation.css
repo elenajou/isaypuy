@@ -12,6 +12,7 @@
   background-color: white;
   background-position: bottom;
   transform: rotate(180deg);
+  text-align: center;
 }
 
 #invitation h2 {
