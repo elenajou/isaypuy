@@ -38,8 +38,12 @@ function CustomModal({caption, classes, buttonID, customStyle, content, onBtnCli
         contentLabel="Modal"
       >
         <div>
-        {/* <button id="btn-close" onClick={closeModal}></button> */}
-          <div>{content}</div>
+          <div className="card-container">
+          <button className="close-button" onClick={closeModal}>
+            &times; {/* Close "X" icon */}
+          </button>
+            {content}
+          </div>
         </div>
       </Modal>
     </div>

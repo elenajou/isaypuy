@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/landing.jsx';
 import Countdown from './components/Countdown/countdown.jsx';
@@ -36,11 +36,20 @@ function App() {
   const [showHome, setShowHome] = useState(false);
 
   const handleMailClick = () => {
-    setShowMail(false); // Fade out Mail
+    setTimeout(() => {
+      setShowMail(false); // Fade out Mail
+    }, 1000);
     setTimeout(() => {
       setShowHome(true); // Fade in Home after Mail fades out
+      document.body.classList.remove('body-lock');
     }, 1000); // Match this duration with your fade-out duration
   };
+
+  useEffect(() => {
+    if (showMail) {
+      document.body.classList.add('body-lock'); // Lock body scroll
+    }
+  }, [showMail]);
 
 
   return (
@@ -53,9 +62,9 @@ function App() {
               <div className={`fade-in ${showHome ? 'visible' : ''}`}>
                 <Home/>
               </div>
-              <div className={`fade-out ${showMail ? '' : 'hidden'}`}>
+              {showMail &&<div className={`fade-out ${showMail ? '' : 'hidden'}`}>
                 <Mail onClick={handleMailClick} />
-              </div>
+              </div>}
             </div>
         }/>
         <Route 

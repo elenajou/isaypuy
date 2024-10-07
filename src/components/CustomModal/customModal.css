@@ -34,3 +34,26 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.card-container {
+  position: relative;
+  background: transparent;
+}
+.close-button {
+  position: absolute;
+  top: 0%; /* Adjust as needed */
+  left: 90%;
+  right: 0px; /* Adjust as needed */
+  background: transparent;
+  border: none;
+  font-size: 30px; /* Adjust size */
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+  color: #333; /* Change color as needed */
+  padding: 0px;
+}
+
+.close-button:hover {
+  color: #ff0000; /* Change color on hover */
+}
+
