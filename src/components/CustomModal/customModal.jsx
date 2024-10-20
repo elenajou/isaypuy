@@ -34,7 +34,7 @@ function CustomModal({caption, classes, buttonID, customStyle, content, onBtnCli
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        style={customStyle}
+        className={customStyle}
         contentLabel="Modal"
       >
         <div>

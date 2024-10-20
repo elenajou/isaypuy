@@ -11,12 +11,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: white;
+  background-color: rgba(255,255,255,0.1);
+  background-blend-mode: lighten;
   text-align: center;
   color: black;
 }
 
 #schedule h2 {
+  margin-top: 40px;
   font-size: 3em;
 }
 #schedule h2 span{

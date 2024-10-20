@@ -10,10 +10,21 @@ import GuestList from './components/GuestList/guestlist.jsx';
 import Mail from './components/Mail/mail.jsx';
 import './App.css'
 
-function Open() {
+function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+  }, []);
   return (
-    <div className="open" id="open">
-      <Mail/>
+    <div
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      ref={domRef}
+    >
+      {props.children}
     </div>
   );
 }
@@ -62,7 +73,7 @@ function App() {
               <div className={`fade-in ${showHome ? 'visible' : ''}`}>
                 <Home/>
               </div>
-              {showMail &&<div className={`fade-out ${showMail ? '' : 'hidden'}`}>
+              {showMail && <div className={`fade-out ${showMail ? '' : 'hidden'}`}>
                 <Mail onClick={handleMailClick} />
               </div>}
             </div>

@@ -36,11 +36,12 @@ const dressType = [
     caption: "Ladies",
     image: dresses,
     children: ""
-  }, {
-    caption: "EVITA ESTOS COLORES",
-    image: avoid,
-    children: ""
-  }
+  }, 
+  // {
+  //   caption: "EVITA ESTOS COLORES",
+  //   image: avoid,
+  //   children: ""
+  // }
 ];
 
 const dressCodeBtn = <div>SUGERENCIAS</div>;

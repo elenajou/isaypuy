@@ -1,31 +1,36 @@
 #invitation {
   position: relative;
-  display: flex;
+  display: grid;
   top: -2px;
   justify-content: center;
   height: max-content;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-image: url('../../images/invitation.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
+  background-color: rgba(255,255,255,0.3);
+  background-blend-mode: lighten;
   background-position: bottom;
   transform: rotate(180deg);
   text-align: center;
   color: black;
+  z-index: 10;
 }
 
 #invitation h2 {
   font-size: 1.5em;
+  width: unset;
 }
 
 .information {
   transform: rotate(180deg);
   display: grid;
   width: 80%;
-  height: 250px;
-  margin-bottom: 20%;
+  height: 400px;
+  margin-bottom: 15%;
+  margin-top: 0%;
+  justify-self: center;
 }
 .ceremonia {
   display: grid;
@@ -37,6 +42,7 @@
 
 .ceremonia > *, .lugar > * {
   margin: 10px;
+  width: unset;
 }
 
 .ReactModal__Content--after-open .rsvp-modal-body{ 
@@ -153,4 +159,30 @@ input::-webkit-inner-spin-button {
 }
 .sad {
   color: brown;
+}
+
+.lugar {
+  display: grid;
+  justify-self: center;
+  height: max-content;
+  width: 100%;
+}
+
+.lugar div {
+  display: flex;
+  height: 20px;
+}
+
+.lugar div a{
+  justify-self: center;
+  margin: 5px;
+  width: 45%;
+}
+
+.transition {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  top: -95px;
+  transform: rotate(180deg);
 }

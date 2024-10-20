@@ -86,6 +86,7 @@
 .dressCode-info-slide {
   max-width: 85vw;
   overflow: hidden;
+  padding-bottom: 40px;
 }
 .dressCode-caption {
   display: block;
