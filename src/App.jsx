@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './components/Landing/landing.jsx';
 import Countdown from './components/Countdown/countdown.jsx';
@@ -11,11 +11,17 @@ import Mail from './components/Mail/mail.jsx';
 import './App.css'
 
 function FadeInSection(props) {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
-  React.useEffect(() => {
+  const [isVisible, setVisible] = useState(false);
+  const [wasVisible, setWasVisible] = useState(false);
+  const domRef = useRef();
+  useEffect(() => {
+    if (isVisible && !wasVisible) 
+      setWasVisible(true);
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
+      entries.forEach(entry => {
+        if (!wasVisible && entry.isIntersecting)
+          setVisible(entry.isIntersecting);
+      });
     });
     observer.observe(domRef.current);
   }, []);
@@ -33,11 +39,11 @@ function Home() {
   return (
     <div className="home" id="home">
       <Landing/>
-      <Countdown/>
-      <Schedule/>
-      <Invitation/>
-      <Retratos/>
-      <MoreInfo/>
+      <FadeInSection><Countdown/></FadeInSection>
+      <FadeInSection><Schedule/></FadeInSection>
+      <FadeInSection><Invitation/></FadeInSection>
+      <FadeInSection><Retratos/></FadeInSection>
+      <FadeInSection><MoreInfo/></FadeInSection>
     </div>
   );
 }

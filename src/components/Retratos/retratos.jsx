@@ -1,4 +1,5 @@
 import CustomModal from '../CustomModal/customModal.jsx';
+import transition from '../../images/transition.png';
 import './retratos.css';
 
 function getThumbnail(link) {
@@ -14,6 +15,7 @@ function Retratos() {
 
   return (
     <div id="retratos" className="retratos-bg">
+      <div className="transition-container"><img className="transition" src={transition} alt="" /></div>
       {/* <img id="retratos-bkg" src={retratos} alt="IsaYPuy"/> */}
       <div className="title">
         <div className="nuestros">Nuestros</div>

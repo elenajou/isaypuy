@@ -5,7 +5,7 @@
   justify-content: center;
   height: max-content;
   width: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
   background-image: url('../../images/invitation.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +15,7 @@
   transform: rotate(180deg);
   text-align: center;
   color: black;
-  z-index: 10;
+  z-index: -1;
 }
 
 #invitation h2 {
@@ -26,10 +26,10 @@
 .information {
   transform: rotate(180deg);
   display: grid;
-  width: 80%;
+  width: 100%;
   height: 400px;
-  margin-bottom: 15%;
-  margin-top: 0%;
+  margin-bottom: 30%;
+  margin-top: 50%;
   justify-self: center;
 }
 .ceremonia {
@@ -177,12 +177,4 @@ input::-webkit-inner-spin-button {
   justify-self: center;
   margin: 5px;
   width: 45%;
-}
-
-.transition {
-  position: relative;
-  justify-self: center;
-  width: 100%;
-  top: -95px;
-  transform: rotate(180deg);
 }

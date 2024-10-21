@@ -5,11 +5,11 @@
   align-items: center;
   justify-content: center;
   height: max-content;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: white;
   text-align: center;
-  padding-top: 50px;
   padding-bottom: 30px;
+  z-index: 10;
 }
 
 .retratos-bg {
@@ -108,4 +108,15 @@
 }
 .g-col-s-2 {
   grid-column: span 2;
+}
+
+.transition-container {
+  height: 70px;
+}
+.transition {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -125px;
+  z-index: 10;
 }

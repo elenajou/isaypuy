@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CustomModal from '../CustomModal/customModal.jsx';
 import Search, { ceremoniaBtn } from './search.jsx';
-import transition from '../../images/transition.png';
 import './invitation.css';
 
 function Invitation() {
@@ -24,7 +23,6 @@ function Invitation() {
 
   return (
     <div id="invitation">
-      <img className="transition" src={transition} alt="" />
       <div className="information">
         <div id="lugar" className="lugar">
           <h2>Lugar</h2>
