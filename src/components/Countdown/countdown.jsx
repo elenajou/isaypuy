@@ -1,4 +1,4 @@
-import countdown from '../../images/casual.png';
+import countdown from '../../images/casual.jpeg';
 import './countdown.css';
 
 function Countdown() {

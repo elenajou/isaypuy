@@ -2,16 +2,15 @@ import CustomModal from '../CustomModal/customModal.jsx';
 import FadeInSection from '../FadeInSection/fadeInSection.jsx';
 import transition from '../../images/transition.png';
 
-import balcony from '../../images/pre-boda/balcony.jpg';
-import field from '../../images/pre-boda/field.jpg';
-import blue from '../../images/pre-boda/blue.jpg';
-import lake1 from '../../images/pre-boda/lake-1.jpg';
-import lake2 from '../../images/pre-boda/lake-2.jpg';
-import lake3 from '../../images/pre-boda/lake-3.jpg';
-import lake4 from '../../images/pre-boda/lake-4.jpg';
-
-import blue2 from '../../images/pre-boda/blue-2.jpg';
-import ring from '../../images/pre-boda/ring.jpg';
+import balcony from '../../images/pre-boda/balcony.jpeg';
+import field from '../../images/pre-boda/field.jpeg';
+import blue from '../../images/pre-boda/blue.jpeg';
+import lake1 from '../../images/pre-boda/lake-1.jpeg';
+import lake2 from '../../images/pre-boda/lake-2.jpeg';
+import lake3 from '../../images/pre-boda/lake-3.jpeg';
+import lake4 from '../../images/pre-boda/lake-4.jpeg';
+import blue2 from '../../images/pre-boda/blue-2.jpeg';
+import ring from '../../images/pre-boda/ring.jpeg';
 
 import './retratos.css';
 

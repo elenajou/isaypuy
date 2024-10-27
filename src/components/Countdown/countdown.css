@@ -6,7 +6,7 @@
 #countdown {
   position: relative;
   display: grid;
-  height: max-content;
+  height: 100%;
   align-items: center;
   justify-items: center;
   background-color: white;
