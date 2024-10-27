@@ -1,4 +1,4 @@
-import countdown from '../../images/countdown.png';
+import countdown from '../../images/casual.png';
 import './countdown.css';
 
 function Countdown() {
@@ -36,7 +36,8 @@ function Countdown() {
   return (
     <div id="countdown">
       <img id="countdown-img" src={countdown} alt="IsaYPuy"/>
-      {/* <div className="title">Falta</div> */}
+      
+      <h2><span>F</span>ALTA</h2>
       <div id="clock">
         <div className="count">
           <span id="days"></span>

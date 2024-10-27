@@ -117,6 +117,18 @@ button:focus-visible {
 .body-lock {
   overflow: hidden;
 }
+
+.transition-container {
+  height: 50px;
+}
+.transition {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -16.5%;
+  z-index: 10;
+}
+
 .fade-out {
   opacity: 1;
   transition: opacity 1s ease;
@@ -139,15 +151,25 @@ button:focus-visible {
   z-index: 10; 
 }
 
-.fade-in-section {
+.fade-in-section-5vh {
+  display: block;
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 1s ease-out,
+    visibility 0.75s ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section-20vh {
+  display: grid;
   opacity: 0;
   transform: translateY(20vh);
   visibility: hidden;
   transition: opacity 1s ease-out, transform 1s ease-out,
-    visibility 1s ease-out;
+    visibility 0.75s ease-out;
   will-change: opacity, transform, visibility;
 }
-.fade-in-section.is-visible {
+.fade-in-section-5vh.is-visible,.fade-in-section-20vh.is-visible  {
   opacity: 1;
   transform: none;
   visibility: visible;

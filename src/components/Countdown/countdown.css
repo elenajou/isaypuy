@@ -1,7 +1,6 @@
 :root {
   --bkgnd-pr: #F7E1D7;
   --bkgnd-scd: #EDAFB8;
-  --countdwn-font: 'Literata';
 }
 
 #countdown {
@@ -15,22 +14,34 @@
   color: black;
 }
 
+#countdown h2 {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  padding: 5px 0 5px 0;
+  top: 40px;
+  color: rgba(56,38,14, 0.50);
+}
+#countdown h2 span {
+  font-size: 46px;
+  font-weight: 300;
+}
 #clock {
   position: absolute;
-  margin-top: 5vh;
+  top: 115px;
+  width: max-content;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(56,38,14, 0.30);
 }
 
-/* .title {
-  text-align: center;
-  font-size: 50px;
-  padding-top: 30px;
-} */
-
 .count > *, .caption > * {
+  position: relative;
   display: inline-block;
   width: 25vw;
   max-width: 70px;
-  border-right: solid 0.5px;
+  font-family: 'Montserrat', serif;
+  color: white;
 }
 
 .count {

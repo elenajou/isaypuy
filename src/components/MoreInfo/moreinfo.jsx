@@ -1,4 +1,4 @@
-import ReactModal from 'react-modal';
+import FadeInSection from '../FadeInSection/fadeInSection.jsx';
 import tie from '../../images/tie-icon.png';
 import notes from '../../images/notes-icon.png';
 import CustomModal from '../CustomModal/customModal.jsx';
@@ -72,22 +72,26 @@ const infoModalHTML = <div key={16} className="info-modal-body">
 function MoreInfo() {
   return (
     <div id="moreinfo">
-      <div className="card-body">
-        <div className="card-content">
-          <div className="card-title">Código de Vestimenta</div>
-          <div className="card-icon"><img src={tie}/></div>
-          <div className="card-caption">Una orientación para tu vestuario</div>
+      <FadeInSection viewHeight="20vh">
+        <div className="card-body">
+          <div className="card-content">
+            <div className="card-title">Código de Vestimenta</div>
+            <div className="card-icon"><img src={tie}/></div>
+            <div className="card-caption">Una orientación para tu vestuario</div>
+          </div>
+          <CustomModal buttonID="sugerenciaModal" content={dressCodeModalHTML} caption={dressCodeBtn} classes="button card-button"></CustomModal>
         </div>
-        <CustomModal buttonID="sugerenciaModal" content={dressCodeModalHTML} caption={dressCodeBtn} classes="button card-button"></CustomModal>
-      </div>
-      <div className="card-body">
-        <div className="card-content">
-          <div className="card-title">Q & A</div>
-          <div className="card-icon"><img src={notes}/></div>
-          <div className="card-caption">Información adicional del evento</div>
+      </FadeInSection>
+      <FadeInSection viewHeight="20vh">
+        <div className="card-body">
+          <div className="card-content">
+            <div className="card-title">Q & A</div>
+            <div className="card-icon"><img src={notes}/></div>
+            <div className="card-caption">Información adicional del evento</div>
+          </div>
+          <CustomModal buttonID="infoModal" content={infoModalHTML} caption={infoBtn} classes="button  card-button"></CustomModal>
         </div>
-        <CustomModal buttonID="infoModal" content={infoModalHTML} caption={infoBtn} classes="button  card-button"></CustomModal>
-      </div>
+      </FadeInSection>
     </div>
   );
 }

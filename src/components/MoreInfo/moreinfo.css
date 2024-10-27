@@ -18,7 +18,7 @@
   height: 70%;
   max-height: 300px;
   width: 70%;
-  align-self: center;
+  justify-self: center;
   border-radius: 5%;
   box-shadow: 8px 8px 20px 1px rgba(0, 0, 0, 0.206);
   padding: 20px;

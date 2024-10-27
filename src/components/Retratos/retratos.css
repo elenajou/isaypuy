@@ -9,12 +9,11 @@
   color: white;
   text-align: center;
   padding-bottom: 30px;
-  z-index: 10;
 }
 
 .retratos-bg {
   position: absolute;
-  background-image: url("https://plus.unsplash.com/premium_photo-1670430932511-ce1929259fed?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url('../../images/pre-boda/balcony.jpg');
   background-color: rgba(0,0,0,0.3);
   background-blend-mode: darken;
   background-position: center;
@@ -41,8 +40,7 @@
 .retratos-title {
   position: relative;
   font-size: 1em;
-  max-width: 80%;
-  top: -60%;
+  top: -20%;
   margin-bottom: 10px;
 }
 
@@ -59,9 +57,9 @@
   align-self: center;
   justify-self: center;
   justify-content: center;
-  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-rows: min-content min-content min-content min-content min-content min-content;
   grid-template-columns: auto auto;
-  gap: 0.5em;
+  gap: 0.25em;
   width: 90%;
   padding-bottom: 1.5em;
 }
@@ -69,6 +67,11 @@
   display: grid;
   overflow: hidden;
   height: 100%;
+  max-height: 61vw;
+  box-sizing: border-box;
+}
+.ReactModal__Content--after-open {
+  width: 95vw;
 }
 .ReactModal__Content--after-open img{
   display: flex;
@@ -89,15 +92,18 @@
 .g-s-row-4 {
   grid-row-start: 4;
 }
+.g-s-row-5 {
+  grid-row-start: 5;
+}
+.g-s-row-6 {
+  grid-row-start: 6;
+}
 
 .g-s-col-1 {
   grid-column-start: 1;
 }
 .g-s-col-2 {
   grid-column-start: 2;
-}
-.g-s-col-3 {
-  grid-column-start: 3;
 }
 
 .g-row-s-2 {
@@ -108,15 +114,4 @@
 }
 .g-col-s-2 {
   grid-column: span 2;
-}
-
-.transition-container {
-  height: 70px;
-}
-.transition {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  top: -125px;
-  z-index: 10;
 }

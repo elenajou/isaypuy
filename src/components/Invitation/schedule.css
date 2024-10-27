@@ -6,7 +6,6 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  overflow: hidden;
   background-image: url('../../images/invitation.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -14,10 +13,11 @@
   background-color: white;
   text-align: center;
   color: black;
+  z-index: 10;
 }
 
 #schedule h2 {
-  margin-top: 40px;
+  margin-top: 15%;
   font-size: 3em;
 }
 #schedule h2 span{

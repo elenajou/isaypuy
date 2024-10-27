@@ -1,37 +1,60 @@
 import CustomModal from '../CustomModal/customModal.jsx';
+import FadeInSection from '../FadeInSection/fadeInSection.jsx';
 import transition from '../../images/transition.png';
+
+import balcony from '../../images/pre-boda/balcony.jpg';
+import field from '../../images/pre-boda/field.jpg';
+import blue from '../../images/pre-boda/blue.jpg';
+import lake1 from '../../images/pre-boda/lake-1.jpg';
+import lake2 from '../../images/pre-boda/lake-2.jpg';
+import lake3 from '../../images/pre-boda/lake-3.jpg';
+import lake4 from '../../images/pre-boda/lake-4.jpg';
+
+import blue2 from '../../images/pre-boda/blue-2.jpg';
+import ring from '../../images/pre-boda/ring.jpg';
+
 import './retratos.css';
+
+const photos = [
+  //row 1 - 2
+  { id: 1, link: balcony, classes: "g-s-col-1 g-s-row-1 g-row-s-2" },
+  { id: 6, link: field, classes: "g-s-col-2 g-s-row-1" },
+  { id: 7, link: blue, classes: "g-s-col-2 g-s-row-2 g-row-s-2" },
+  //row 3
+  { id: 2, link: ring, classes: "g-s-col-1 g-s-row-3" },
+  //row 4
+  { id: 3, link: lake1, classes: "g-s-col-1 g-s-row-4" },
+  { id: 8, link: lake3, classes: "g-s-col-2 g-s-row-4" },
+  //row 5
+  { id: 10, link: blue2, classes: "g-s-col-1 g-s-row-5 g-row-s-2" },
+  { id: 4, link: lake2, classes: "g-s-col-2 g-s-row-5" },
+  //row 6
+  { id: 5, link: lake4, classes: "g-s-col-2 g-s-row-6" },
+
+];
 
 function getThumbnail(link) {
   return <img src={link}/>;
 }
-function Retratos() {
-  let photo1 = "https://plus.unsplash.com/premium_photo-1674581215484-e6242a37c51e?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let photo2 = "https://plus.unsplash.com/premium_photo-1675003662150-2569448d2b3b?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let photo3 = "https://images.unsplash.com/photo-1634692843550-8ddff2a880ad?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let photo4 = "https://images.unsplash.com/photo-1609151162377-794faf68b02f?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let photo5 = "https://images.unsplash.com/photo-1634729108541-516d16ddceec?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let photo6 = "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
+function Retratos() {
   return (
     <div id="retratos" className="retratos-bg">
       <div className="transition-container"><img className="transition" src={transition} alt="" /></div>
-      {/* <img id="retratos-bkg" src={retratos} alt="IsaYPuy"/> */}
+ 
       <div className="title">
-        <div className="nuestros">Nuestros</div>
-        <div className="retratos-title">Retratos</div>
+        <FadeInSection viewHeight="20vh">
+          <div className="nuestros">Nuestros</div>
+          <div className="retratos-title">Retratos</div>
+        </FadeInSection>
       </div>
-      <div className="body-thumbnails">
-        {/* Column 1 */}
-        <div className="g-s-row-1 g-s-col-1 g-row-s-2"><CustomModal content={getThumbnail(photo1)} caption={getThumbnail(photo1)} classes="thumbnail"></CustomModal></div>
-        <div className="g-s-row-4 g-s-col-1"><CustomModal content={getThumbnail(photo6)} caption={getThumbnail(photo6)} classes="thumbnail"></CustomModal></div>
-        <div className="g-s-row-3 g-s-col-1"><CustomModal content={getThumbnail(photo4)} caption={getThumbnail(photo4)} classes="thumbnail"></CustomModal></div>
-
-        {/* Column 2 */}
-        <div className="g-s-row-1 g-s-col-2"><CustomModal content={getThumbnail(photo5)} caption={getThumbnail(photo5)} classes="thumbnail"></CustomModal></div>
-        <div className="g-s-row-2 g-s-col-2 g-row-s-2"><CustomModal content={getThumbnail(photo3)} caption={getThumbnail(photo3)} classes="thumbnail"></CustomModal></div>
-        <div className="g-s-row-4 g-s-col-2"><CustomModal content={getThumbnail(photo2)} caption={getThumbnail(photo2)} classes="thumbnail"></CustomModal></div>
-      </div>
+      <FadeInSection viewHeight="20vh">
+        <div className="body-thumbnails">
+          {photos.map(({id, link, classes}) => {
+            return <FadeInSection viewHeight="5vh" classes={classes}><CustomModal content={getThumbnail(link)} caption={getThumbnail(link)} classes="thumbnail"></CustomModal></FadeInSection>
+          })}
+        </div>
+      </FadeInSection>
     </div>
   );
 }

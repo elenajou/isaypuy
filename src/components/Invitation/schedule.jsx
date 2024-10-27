@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CustomModal from '../CustomModal/customModal.jsx';
 import Search, { ceremoniaBtn } from './search.jsx';
+import FadeInSection from '../FadeInSection/fadeInSection.jsx';
+import transition from '../../images/transition.png';
 import './schedule.css';
 import './invitation.css';
 
@@ -34,36 +36,41 @@ function Schedule() {
   return (
     <>
       <div id="schedule">
-        <h2><span>Dia del</span><br></br>EVENTO</h2>
-        <p><span>25 de Enero de 2025</span></p>
+        <div className="transition-container"><img className="transition" src={transition} alt="" /></div>
+        <FadeInSection viewHeight="20vh"><h2><span>Dia del</span><br></br>EVENTO</h2>
+        <p><span>25 de Enero de 2025</span></p></FadeInSection>
         <ol id="schedule-all-events">
           {scheduleItems.map(({id, icon, time, description}) => {
-            return <li key={id} className='schedule-event'><img src={icon} alt="" /><div>{time} </div><div>{description}</div></li>
+            return <FadeInSection key={id} viewHeight="5vh"><li className='schedule-event'><img src={icon} alt="" /><div>{time} </div><div>{description}</div></li></FadeInSection>
           })}
         </ol>
       </div>
       <div id="invitation">
         <div className="information">
-          <div id="lugar" className="lugar">
-            <h2>Lugar</h2>
-            <p>Hacienda Los Molinos Boutique</p>
-            <p>Boquete, Chiriqui</p>
-            <div>
-              <div><a className="button waze" href="https://waze.com/ul/hd1t379pm8">Waze</a></div>
-              <div><a className="button" href="https://maps.app.goo.gl/EDzE9D7C2dytm77G8">Google Maps</a></div>
+        <FadeInSection viewHeight="20vh">
+            <div id="lugar" className="lugar">
+              <h2>Lugar</h2>
+              <p>Hacienda Los Molinos Boutique</p>
+              <p>Boquete, Chiriqui</p>
+              <div>
+                <div><a className="button waze" href="https://waze.com/ul/hd1t379pm8">Waze</a></div>
+                <div><a className="button" href="https://maps.app.goo.gl/EDzE9D7C2dytm77G8">Google Maps</a></div>
+              </div>
             </div>
-          </div>
-          <div className="ceremonia">
-            <h2>Ceremonia</h2>
-            <p><span>25 de Enero de 2025</span></p>
-            <CustomModal 
-              buttonID="ceremonia" 
-              content={ceremoniaModal} 
-              caption={ceremoniaBtn} 
-              classes="button" 
-              onBtnClick={toggleSearchModalContent}>
-            </CustomModal>
-          </div>
+          </FadeInSection>
+          <FadeInSection viewHeight="20vh">
+            <div className="ceremonia">
+              <h2>Ceremonia</h2>
+              <p><span>25 de Enero de 2025</span></p>
+              <CustomModal 
+                buttonID="ceremonia" 
+                content={ceremoniaModal} 
+                caption={ceremoniaBtn} 
+                classes="button" 
+                onBtnClick={toggleSearchModalContent}>
+              </CustomModal>
+            </div>`
+          </FadeInSection>
         </div>
     </div>
     </>
