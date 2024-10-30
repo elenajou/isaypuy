@@ -178,3 +178,7 @@ input::-webkit-inner-spin-button {
   margin: 5px;
   width: 45%;
 }
+
+#schedule .transition {
+  top: -16%;
+}

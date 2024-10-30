@@ -40,11 +40,12 @@ function Retratos() {
   return (
     <div id="retratos" className="retratos-bg">
       <div className="transition-container"><img className="transition" src={transition} alt="" /></div>
- 
+
       <div className="title">
         <FadeInSection viewHeight="20vh">
           <div className="nuestros">Nuestros</div>
           <div className="retratos-title">Retratos</div>
+          <div className="retratos-caption">Click para abrir</div>
         </FadeInSection>
       </div>
       <FadeInSection viewHeight="20vh">

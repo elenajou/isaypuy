@@ -40,8 +40,18 @@
 .retratos-title {
   position: relative;
   font-size: 1em;
-  top: -20%;
-  margin-bottom: 10px;
+  top: -40%;
+  margin-bottom: 0px;
+}
+
+.retratos-caption {
+  font-size: 15px;
+  opacity: 70%;
+  top: -10px;
+}
+
+#retratos .transition {
+  top: -12%;
 }
 
 .title {
