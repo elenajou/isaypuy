@@ -1,7 +1,3 @@
-function playMusic() {
-  document.getElementById("my_audio").play();
-}
-
 document.getElementById("msg-btn").click();
 console.log("clicked");
 

@@ -4,6 +4,7 @@ import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { db } from '../../scripts/firebase.js';
 import AddGuest from './AddGuest/addGuest.jsx';
 import ModifyGuest from './modifyGuest/modifyGuest.jsx';
+import DeleteGuest from './DeleteGuest/deleteGuest.jsx'
 import './guestlist.css';
 // Function to fetch guests
 const getAllGuests = async () => {
@@ -45,6 +46,7 @@ function GuestList() {
       const guests = await getAllGuests();
       if (guests) {
         setAllGuests(guests); // Set the guests in state
+        document.body.classList.remove('body-lock');
       }
     };
     fetchGuests();
@@ -53,6 +55,7 @@ function GuestList() {
   return (<div id="guestList">
     <AddGuest/>
     <ModifyGuest/>
+    <DeleteGuest/>
 
     <div id="allGuestList">
       <h2>Aqui estan todos los invitados en el sistema</h2>

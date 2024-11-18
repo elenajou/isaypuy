@@ -5,14 +5,14 @@ import { collection, getDocs, query, where, limit, doc, updateDoc} from 'firebas
 import { db } from '../../../scripts/firebase.js';
 
 // Function to add guest
-const firestoreModifyGuest = async (name, phone, reservedSeats) => {
-  if (!name || !phone || !reservedSeats){
+const firestoreModifyGuest = async (name, oldPhone, reservedSeats) => {
+  if (!name || !oldPhone || !reservedSeats){
     return <div className="error">El nombre, celular y puestos no pueden estar vacios</div>
   }
   const invitadosRef = collection(db, 'invitados');
   const q = query(
     invitadosRef,
-    where('phone', '==', phone), // Using the phone variable to filter
+    where('phone', '==', oldPhone), // Using the phone variable to filter
     limit(1)
   );
 
@@ -28,7 +28,7 @@ const firestoreModifyGuest = async (name, phone, reservedSeats) => {
       }
       await updateDoc(doc(db, 'invitados', guestDoc.id), data); // Add the document
       console.log("Document written with ID: ", guestDoc.id); // Log the document ID
-      return <div>Se modifico exitosamente: {name} - {phone} - {reservedSeats}</div>
+      return <div>Se modifico exitosamente: {name}, {phone}, {reservedSeats}</div>
     }
   } catch (error) {
     console.error("Error adding doc:", error);
@@ -38,12 +38,13 @@ const firestoreModifyGuest = async (name, phone, reservedSeats) => {
 
 function ModifyGuest() {
   const [name, setName] = useState();
-  const [phone, setPhone] = useState();
+  const [oldPhone, setOldPhone] = useState();
+  const [newPhone, setNewPhone] = useState();
   const [reservedSeats, setReservedSeats] = useState();
   const [log, setLog] = useState();
 
   const modifyGuest = async () => {
-    const log = await firestoreModifyGuest(name, phone, reservedSeats);
+    const log = await firestoreModifyGuest(name, oldPhone, reservedSeats);
     if (log) setLog(log);
   }
 
@@ -54,6 +55,14 @@ function ModifyGuest() {
     <div className="section-add-guest">
       <h2>Aqui modificas invitaciones </h2>
       <div className="field">
+        <div className="label" htmlFor="addGuestPhone">Numero de Celular para buscar</div>
+        <PhoneInput
+          id="oldGuestPhone"
+          placeholder="+507 6222 2222"
+          value={oldPhone}
+          onChange={setOldPhone} />
+      </div>
+      <div className="field">
         <div className="label" htmlFor="addGuestName">Nombre Completo</div>
         <input 
           type="text" 
@@ -61,14 +70,6 @@ function ModifyGuest() {
           id="addGuestName" 
           value={name} 
           onChange={(e)=>setName(e.target.value)} />
-      </div>
-      <div className="field">
-        <div className="label" htmlFor="addGuestPhone">Numero de Celular</div>
-        <PhoneInput
-          id="addGuestPhone"
-          placeholder="+507 6222 2222"
-          value={phone}
-          onChange={setPhone} />
       </div>
       <div className="field">
         <div className="label" htmlFor="addGuestSeats">Puestos Reservados</div>

@@ -38,6 +38,7 @@
 .card-container {
   position: relative;
   background: transparent;
+  height: fit-content;
 }
 .close-button {
   position: absolute;
